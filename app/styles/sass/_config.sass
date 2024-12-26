@@ -1,0 +1,26 @@
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+
+
+html
+	height: 100%
+body
+	background-color: #2b474b
+	color: $white-color
+	height: 100%
+	font-size: 16px
+	font-family: montserrat-g, sans-serif
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+@include font('montserrat-g', normal, 400, '../fonts/Montserrat-Regular.woff2')
+@include font('montserrat-g', normal, 600, '../fonts/Montserrat-SemiBold.woff2')
+@include font('montserrat-g', normal, 700, '../fonts/Montserrat-Bold.woff2')
+@include font('montserrat-g', normal, 900, '../fonts/Montserrat-Black.woff2')
